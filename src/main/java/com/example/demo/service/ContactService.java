@@ -6,6 +6,7 @@ import java.util.Optional;
 import com.example.demo.model.Contact;
 import com.example.demo.repository.ContactRepository;
 
+import org.aspectj.apache.bcel.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +27,10 @@ public class ContactService {
   public Contact saveContact(String name, String number) {
     Contact contact = Contact.builder().name(name).number(number).build();
     return this.contactRepository.save(contact);
+  }
+
+  public Contact updateContact( Contact contact, int id) {
+    return contactRepository.save(contact);
   }
   
 }
