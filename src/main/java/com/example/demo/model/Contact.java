@@ -24,5 +24,8 @@ public class Contact {
   private String name;
 
   private String number;
+
+public void setId(String string) {
+}
   
 }
